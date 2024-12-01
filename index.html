@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohan Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b25a059447.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Images/Logo.png" class="Logo" alt="Logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>JAVA DEVELOPER</p>
+            <h1>Hi, I am <span>Rohan</span><br>from West Bengal</h1>
+        </div>
+    </div>
+</div>
+
+<!-- ---------------------------about------------------------ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/mypic.png" alt="Profile Picture">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Greetings, everyone! Thank you for taking the time to visit my profile. I am currently pursuing a Bachelor's degree in Technology (B-Tech) at Kalinga Institute of Industrial Technology. I completed my schooling at Kendriya Vidyalaya Sangathan.
+                I specialize in SQL and Java Development and have a keen interest in web design and development. Additionally, I possess a foundational understanding of Python and Database Management Systems.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab(event, 'Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab(event, 'Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab(event, 'Education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>JAVA DEVELOPER</span></li>
+                        <li><span>SQL</span></li>
+                        <li><span>DATA STRUCTURE</span></li>
+                        <li><span>GENERATIVE AI</span></li>
+                        <li><span>WEB APP DEVELOPER</span></li>                                    
+                        <li><span>PHOTOSHOP EDITOR</span></li>
+                        <li><span>CONTENT WRITING</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>Railway Reservation Projects by using JAVA API</span></li>
+                        <li><span>Intern at TeamEverest as Content Writer</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>KALINGA INSTITUTE OF INDUSTRIAL TECHNOLOGY</span><br>BTECH in COMPUTER SCIENCE AND ENGINEERING 2022-26</li>
+                        <li><span>SENIOR SECONDARY SCHOOL 12TH</span><br>KENDRIYA VIDYALAYA 2021-22</li>
+                        <li><span>SECONDARY SCHOOL 10TH</span><br>KENDRIYA VIDYALAYA 2019-20</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ---------------------------------Services------------------------------ -->
+
+<div  id="services">
+   <div class="container">
+    <h1 class="sub-title">My Services</h1>
+    <div class="services-list">
+        <div>
+            <i class="fa-brands fa-java"></i>
+            <h2>Java API Development</h2>
+            <p>You can contact me for any type of Java API Development</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div>
+            <i class="fa-solid fa-crop"></i>
+            <h3>Content Writing</h3>
+            <p>You can contact me for any type of Content Writing</p>
+            <a href="#">Learn More</a>
+        </div>
+    </div>
+   </div>
+
+</div>  
+
+<!-- ------------------------------Portfolio-------------------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="" alt="">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ------------------------------contact------------------ -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-phone"></i> 9123032676</p>
+                <p><i class="fa-solid fa-paper-plane"></i> engineer.rohan26@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/rohan-bose-328b58278/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://huggingface.co/rohanbose"><i class="fa-sharp fa-thin fa-face-smiling-hands"></i></a>
+                    
+
+                </div>
+                <a href="Images/Resume.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right"></div>
+            <form>
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(event, tabname){
+        for (var tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (var tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</body>
+</html>
